@@ -32,11 +32,11 @@ let user_input = await inquirer.prompt([
     }
 ]);
 
-let currencyFrom:any = currency[user_input.from];
-let currencyTo: any =currency[user_input.to];
+let currencyFrom:number= currency[user_input.from];
+let currencyTo:number =currency[user_input.to];
 let amount:number = user_input.amount
 
-function currency_converter(currencyFrom:any,currencyTo:any,amount:number) {
+function currency_converter(currencyFrom:number,currencyTo:number,amount:number) {
     return (amount * currencyTo/currencyFrom).toFixed(2)
 }
 
